@@ -1,0 +1,208 @@
+/* Core HTML elements */
+body {
+    max-width: 900px;
+    margin: auto;
+    font-family: sans-serif;
+}
+h1 {
+    margin: auto;
+    padding: 0em 0.5em;
+}
+h2 {
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+@media (min-width: 720px) {
+    h1 {
+        display: inline-block;
+    }
+}
+p {
+    text-align: justify;
+    font-size: 11pt;
+    line-height: 1.5em;
+}
+hr {
+    border-top: 1px solid;
+    border-bottom: 0px;
+}
+iframe {
+    border-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Common */
+.section {
+    margin: 1em;
+}
+
+/* Menu */
+.menu {
+    margin-top: 1em;
+    text-align: center;
+}
+.menu-heading {
+    text-decoration: none;
+}
+.menu-content {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: auto;
+    list-style-type: none;
+    padding: 0;
+}
+.menu-item {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-item a {
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+@media (min-width: 520px) {
+    .menu-item {
+        display: inline-block;
+    }
+}
+@media (min-width: 720px) {
+    .menu {
+        text-align: left;
+    }
+    .menu-content {
+        margin-top: 0.5em;
+        float:right;
+    }
+}
+
+/* Social icons bar */
+.social {
+    font-size: 24pt;
+    text-align: center;
+    margin: 0;
+}
+@media (min-width: 720px) {
+    .social {
+        text-align: right;
+        margin: 0em 0.5em;
+    }
+}
+.social a {
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    font-size: 9pt;
+    margin-bottom: 1em;
+}
+.footer footer {
+    margin: 0em 0.5em;
+}
+
+/* About section */
+.about-photo {
+    text-align: center;
+}
+@media (min-width: 520px) {
+    .about-photo {
+        float: left;
+        margin: 0em 1em;
+    }
+}
+.about-photo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Featured projects section */
+.featured-projects-container {
+    text-align: center;
+}
+.featured-project {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5em 0em;
+}
+@media (min-width: 520px) {
+    .featured-project {
+        width: 48%;
+    }
+}
+.featured-project h3 {
+    margin: auto;
+}
+.featured-project figure {
+    text-align: center;
+    margin: 0em 0em 1em 0em;
+}
+.featured-project figcaption {
+    font-size: 10pt;
+}
+.featured-project img {
+    width: 100%;
+    height: auto;
+}
+
+/* Project list */
+.projects {
+    max-width: 500px;
+    margin: auto;
+}
+@media (min-width: 720px) {
+    .projects {
+        max-width: 100%;
+    }
+}
+.project-item h3 {
+    margin-top: 0em;
+    margin-bottom: 0.1em;
+}
+.project-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+@media (min-width: 720px) {
+    .project-item img {
+        float: left;
+        margin-right: 1em;
+    }
+}
+.project-separator {
+    clear: both;
+    padding: 1em 0em;
+}
+.project-tech {
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0em;
+}
+.project-morelink {
+    text-align: right;
+}
+
+/* Project page */
+.project {
+    margin-bottom: 5em;
+}
+.project h2 {
+    margin-bottom: 0em;
+}
+.project-image img {
+    width: 100%;
+    max-width: 868px;
+    height: auto;
+}
+.project-vimeo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}

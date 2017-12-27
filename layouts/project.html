@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= render '/partials/head.html' %>
+    </head>
+    <body>
+        <%= render '/partials/top.html' %>
+        <div class="section project">
+            <% if @item.key?(:image) %>
+            <div class="project-image">
+                <img src="<%= @item[:image] %>">
+            </div>
+            <% elsif @item.key?(:vimeo) %>
+            <div class="project-vimeo">
+                <iframe src="https://player.vimeo.com/video/<%= @item[:vimeo] %>?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+            </div>
+            <% end %>
+            <h2><%= "#{@item[:name]} (#{@item[:year]})" %></h2>
+            <p class="project-tech"><%= @item[:tech] %></p>
+            <p><%= @item[:summary] %></p>
+            <%= yield %>
+        </div>
+        <%= render '/partials/bottom.html' %>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# Content dimensions:
+# icon : 400px width
+# image: 868px width
+
+compile '/*.html' do
+  layout item.identifier.to_s
+  filter :erb
+end
+compile '/projects/*.html' do
+  layout '/project.html'
+  filter :erb
+end
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+route '/homepage.html' do
+  '/index.html'
+end
+route '/**/*.{html}' do
+  item.identifier.to_s
+end
+
+layout '/**/*', :erb

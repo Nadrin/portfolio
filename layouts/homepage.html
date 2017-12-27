@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= render '/partials/head.html' %>
+    </head>
+    <body>
+        <%= render '/partials/top.html' %>
+        <div class="section about">
+            <%= yield %>
+        </div>
+        <div class="section featured-projects">
+            <h2>Featured Projects</h2>
+            <div class="featured-projects-container">
+                <% project_items(:homepage).each do |project| %>
+                <div class="featured-project">
+                    <figure>
+                        <a href="<%= project.path %>"><img src="<%= project[:icon] %>"></a>
+                        <figcaption><%= project[:description] %></figcaption>
+                    </figure>
+                </div>
+                <% end %>
+            </div>
+        </div>
+        <%= render '/partials/bottom.html' %>
+    </body>
+</html>
