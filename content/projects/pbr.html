@@ -1,0 +1,44 @@
+---
+name: Physically Based Shading
+year: 2017.2
+tech: Windows/Linux, C++, OpenGL 4, Direct3D 11, Direct3D 12
+icon: /images/icons/pbr.jpg
+image: /images/pbr.jpg
+featured: yes
+homepage: yes
+description: Physically based shading & image based lighting implemented in multiple graphics APIs.
+summary: |
+    <p>
+        Shading model combines Lambertian diffuse BRDF with Cook-Torrance microfacet specular BRDF.
+        For direct lighting up to three analytical light sources are supported. Indirect lighting
+        is approximated by an irradiance map and a reflection environment map pre-filtered
+        for various roughness values. Split-sum approximation is used to achieve sufficient image
+        quality without taking multiple samples of the environment.
+    </p>
+
+---
+<%= @item[:summary] %>
+<p>
+    Environment map filtering and split-sum specular BRDF 2D LUT generation is performed at startup via compute shaders.
+</p>
+<p>
+    The goal of this project is to showcase the use of various modern graphics APIs and to provide a clear side-by-side comparison of them.
+    I believe that an implementation of physically based shading is a sufficiently non-trivial use case for that comparison to be useful.
+</p>
+<p>
+    Each implementation is completely self contained within a single source/header pair.
+    The coding style is mostly procedural ("C with classes") using simple POD structs for grouping related data together.
+    This was done for simplicity, readability, and to not impose any particular renderer design/organization.
+</p>
+<p>Shaders are heavily commented because there's where interesting stuff happens. :)</p>
+<h4>Supported APIs:</h4>
+<ul>
+    <li>OpenGL 4.5</li>
+    <li>Direct3D 11</li>
+    <li>Direct3D 12</li>
+    <li>Vulkan <em>(implementation in progress)</em></li>
+</ul>
+<h3>Links</h3>
+<ul>
+    <li><a href="https://github.com/Nadrin/PBR">GitHub repository</a></li>
+</ul>

@@ -129,7 +129,7 @@ iframe {
     text-align: center;
     width: 100%;
     max-width: 400px;
-    padding: 0.5em 0em;
+    padding: 0em;
 }
 @media (min-width: 520px) {
     .featured-project {
@@ -138,13 +138,6 @@ iframe {
 }
 .featured-project h3 {
     margin: auto;
-}
-.featured-project figure {
-    text-align: center;
-    margin: 0em 0em 1em 0em;
-}
-.featured-project figcaption {
-    font-size: 10pt;
 }
 .featured-project img {
     width: 100%;
@@ -196,10 +189,31 @@ iframe {
 .project h2 {
     margin-bottom: 0em;
 }
+.project h3,h4 {
+    margin-bottom: 0.5em;
+}
+.project ul {
+    margin-top: 0em;
+    font-size: 11pt;
+    line-height: 1.5em;
+}
 .project-image img {
-    width: 100%;
-    max-width: 868px;
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.project-image-inline {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+@media (min-width: 520px) {
+    .project-image-inline {
+        float: right;
+        margin-left: 1em;
+    }
 }
 .project-vimeo {
     position: relative;

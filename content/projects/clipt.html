@@ -1,0 +1,30 @@
+---
+name: OpenCL Image Processing Toolkit
+year: 2012
+tech: Linux, C, OpenCL, GTK 3
+icon: /images/icons/clipt.jpg
+image: /images/clipt.jpg
+featured: yes
+description: GPU accelerated image processing application using OpenCL.
+summary: |
+    <p>Image processing operations run in OpenCL kernels and results are displayed via OpenGL. The UI is made in GTK3.</p>
+    <p>
+        I was responsible for the main program structure (subsystem initialization, configuration handling, main loop), OpenCL initialization code,
+        a robust OpenGL/OpenCL buffer sharing system and a plugin API. I also wrote a universal GPU-accelerated convolution filter.
+    </p>
+---
+<p>
+    This project was started by me and Miłosz Kosobucki as a programming assignment for <em>Image Processing</em> course at
+    Faculty of Mathematics and Computer Science, Adam Mickiewicz University in Poznań, Poland, under the supervision of Mr Wojciech Kowalewski PhD.
+</p>
+<%= @item[:summary] %>
+<p>
+    To avoid sending big images back and forth through PCI Express bus CLIPT uses buffer sharing between OpenCL and OpenGL introduced in OpenCL 1.1.
+    Internal image format is 32 bits per channel RGB stored as floats. This fact establishes 1GB of VRAM as a reasonable minimum when working with large (4k x 4k) images,
+    since two copies of the image must be stored in GPU memory. When user previews some filter/operation and adjusts parameters in real time, the data is not leaving the GPU.
+    This makes interaction with the program very smooth. Only when the user hits Apply on an effect window, the result of the GPU computation is sent back to system RAM.
+</p>
+<h3>Links</h3>
+<ul>
+    <li><a href="https://github.com/MiKom/clipt">Source on GitHub</a></li>
+</ul>

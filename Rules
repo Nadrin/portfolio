@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Content dimensions:
-# icon : 400px width
+# icon : 400px width, 300px height
 # image: 868px width
 
 compile '/*.html' do

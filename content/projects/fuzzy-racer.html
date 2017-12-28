@@ -1,0 +1,20 @@
+---
+name: Fuzzy Racer
+year: 2009.2
+tech: Linux, C, TORCS
+icon: /images/icons/fuzzy-racer.jpg
+vimeo: 14217569
+description: Fuzzy logic racing bot.
+summary: |
+    <p>
+        An AI racing robot written by me and my friend Miłosz Kosobucki as final assignment for <em>Fuzzy Set Theory</em> course
+        at Faculty of Mathematics and Computer Science, Adam Mickiewicz University in Poznań, Poland.
+    </p>
+---
+<%= @item[:summary] %>
+<p>
+    It uses <a href="http://torcs.sourceforge.net/">The Open Racing Car Simulator</a> API to integrate into the game.
+    The AI itself makes have use of a fuzzy logic controler to calculate acceleration, steering and geer shitfing behavior
+    in respect to current track geometry, all in real-time. No opponent avoidance code is present at the moment but the robot
+    performs reasonably well on various tracks alone.
+</p>

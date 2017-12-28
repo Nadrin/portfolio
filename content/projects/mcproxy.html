@@ -1,0 +1,29 @@
+---
+name: Minecraft Network Protocol Proxy
+year: 2011.2
+tech: Linux/macOS, C, Glib
+icon: /images/icons/mcproxy.png
+description: Modular Minecraft network protocol proxy.
+summary: |
+    <p>
+        The main purpose of this project is to manipulate and/or analyze Minecraft protocol data in real-time on
+        either server- or client-side being completely transparent to both parties.
+    </p>
+---
+<%= @item[:summary] %>
+<p>
+    A functional proxy consists of two parts: the core (mcproxy binary) and at least one handler library.
+    The core takes care of networking, threading, protocol decoding and encoding, memory management etc.
+    A handler library registers a set of callback functions to the core which get called whenever specific event occurs
+    (for example new client connects or specific type of protocol packet arrives). It is here where required logic has
+    to be implemented. The core publishes its API for use by handler libraries in the form of a static library (libproxyapi)
+    which all handler libraries are required to link to.
+</p>
+<p>
+    Later addition of client and server modes of operation made it possible to implement a full Minecraft client/server
+    using mcproxy as a framework.
+</p>
+<h3>Links</h3>
+<ul>
+    <li><a href="https://github.com/Nadrin/mcproxy">Source on GitHub</a></li>
+</ul>

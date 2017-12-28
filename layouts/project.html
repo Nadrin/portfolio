@@ -15,9 +15,9 @@
                 <iframe src="https://player.vimeo.com/video/<%= @item[:vimeo] %>?title=0&byline=0&portrait=0" allowfullscreen></iframe>
             </div>
             <% end %>
-            <h2><%= "#{@item[:name]} (#{@item[:year]})" %></h2>
+            <h2><%= "#{@item[:name]} (#{year_of(@item)})" %></h2>
             <p class="project-tech"><%= @item[:tech] %></p>
-            <p><%= @item[:summary] %></p>
+            <p><%= @item[:description] %></p>
             <%= yield %>
         </div>
         <%= render '/partials/bottom.html' %>

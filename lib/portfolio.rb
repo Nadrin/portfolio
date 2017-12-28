@@ -18,4 +18,8 @@ module PortfolioHelper
         end
         result.sort { |a,b| b[:year] <=> a[:year] }
     end
+
+    def year_of(project)
+        project[:year].to_s.split('.')[0]
+    end
 end
