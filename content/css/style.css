@@ -48,7 +48,7 @@ h4 {
     font-family: 'Tschichold';
     font-size: 32pt;
 }
-@media (min-width: 720px) {
+@media (min-width: 750px) {
     .menu-content {
         margin-top: 1.0em;
     }

@@ -13,7 +13,7 @@ h2 {
     margin-top: 1.5em;
     margin-bottom: 1em;
 }
-@media (min-width: 720px) {
+@media (min-width: 750px) {
     h1 {
         display: inline-block;
     }
@@ -70,7 +70,7 @@ iframe {
         display: inline-block;
     }
 }
-@media (min-width: 720px) {
+@media (min-width: 750px) {
     .menu {
         text-align: left;
     }
@@ -86,7 +86,7 @@ iframe {
     text-align: center;
     margin: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 750px) {
     .social {
         text-align: right;
         margin: 0em 0.5em;
@@ -152,7 +152,7 @@ iframe {
     max-width: 500px;
     margin: auto;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
     .projects {
         max-width: 100%;
     }
@@ -166,10 +166,11 @@ iframe {
     max-width: 400px;
     height: auto;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
     .project-item img {
         float: left;
         margin-right: 1em;
+        padding-bottom: 3em;
     }
 }
 .project-separator {

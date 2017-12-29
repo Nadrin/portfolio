@@ -12,7 +12,7 @@
             </div>
             <% elsif @item.key?(:vimeo) %>
             <div class="project-vimeo">
-                <iframe src="https://player.vimeo.com/video/<%= @item[:vimeo] %>?title=0&byline=0&portrait=0" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/<%= @item[:vimeo] %>?title=0&byline=0&portrait=0&color=3498db" allowfullscreen></iframe>
             </div>
             <% end %>
             <h2><%= "#{@item[:name]} (#{year_of(@item)})" %></h2>
