@@ -12,7 +12,7 @@
                 <div class="project-item">
                     <a href="<%= project.path %>"><img src="<%= project[:icon] %>"></a>
                     <h3><%= "#{project[:name]} (#{year_of(project)})" %></h3>
-                    <p class="project-tech"><%= project[:tech] %></p>
+                    <div class="project-tech"><%= project[:tech] %></div>
                     <p><%= project[:description] %></p>
                     <%= project[:summary] %>
                     <p class="project-morelink"><a href="<%= project.path %>">Read more &raquo;</a></p>
@@ -24,7 +24,7 @@
                 <div class="project-item">
                     <a href="<%= project.path %>"><img src="<%= project[:icon] %>"></a>
                     <h3><%= "#{project[:name]} (#{year_of(project)})" %></h3>
-                    <p class="project-tech"><%= project[:tech] %></p>
+                    <div class="project-tech"><%= project[:tech] %></div>
                     <p><%= project[:description] %></p>
                     <%= project[:summary] %>
                     <p class="project-morelink"><a href="<%= project.path %>">Read more &raquo;</a></p>
