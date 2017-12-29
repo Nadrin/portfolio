@@ -13,7 +13,7 @@
             <div class="featured-projects-container">
                 <% project_items(:homepage).each do |project| %>
                 <div class="featured-project">
-                    <a href="<%= project.path %>"><img src="<%= project[:icon] %>"></a>
+                    <a href="<%= page_url(project.path) %>"><img src="<%= project[:icon] %>"></a>
                 </div>
                 <% end %>
             </div>

@@ -22,4 +22,12 @@ module PortfolioHelper
     def year_of(project)
         project[:year].to_s.split('.')[0]
     end
+
+    def page_url(item_path)
+        if ENV['NANOC_ENV'] == 'prod'
+            item_path.chomp(File.extname(item_path))
+        else
+            item_path
+        end
+    end
 end
