@@ -1,0 +1,27 @@
+---
+name: A Subjective Experience&hellip;
+year: 2005
+tech: Windows, C++, OpenGL, FMOD
+icon: /images/icons/experience.jpg
+vimeo: 14160762
+description: A 16 seconds real-time animation created for Abstract 2005 science and computer graphics festival in Gliwice, Poland.
+summary: |
+    <p>
+        It features several fast camera takes on a classic still life scene rendered in real-time with OpenGL and
+        ends with a joke error message – a reference to the Amiga computer.
+    </p>
+---
+<%= @item[:summary] %>
+<p>
+    The simple 3D engine used in this demo was my first serious approach to graphics programming.
+    Using fixed-function pipeline it is capable of per vertex lighting with up to 8 lights (4 are used in the actual demo),
+    multitexturing, fullscreen blur and simple particle effects with billboarded sprites.
+    Scene geometry is read from 3DS files exported from 3D Studio MAX.
+    Camera animation was done using a simple scripting language which was later compiled to an array of 
+    precomputed modelview matrices at constant time intervals.
+</p>
+<h3>Links</h3>
+<ul>
+    <li><a href="/files/experience.zip">Download</a></li>
+    <li><a href="https://www.pouet.net/prod.php?which=17755">Pouet.net entry</a></li>
+</ul>

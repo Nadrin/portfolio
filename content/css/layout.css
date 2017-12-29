@@ -121,6 +121,9 @@ iframe {
 }
 
 /* Featured projects section */
+.featured-projects {
+    margin-bottom: 3em;
+}
 .featured-projects-container {
     text-align: center;
 }
