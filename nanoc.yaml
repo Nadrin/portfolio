@@ -88,3 +88,9 @@ checks:
     # E.g.:
     #   exclude_files: ['blog/page']
     exclude_files: []
+
+# Deployment configuration
+deploy:
+  default:
+    kind: rsync
+    dst: "www:/var/www/siejak.pl"
