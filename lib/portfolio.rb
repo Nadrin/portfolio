@@ -1,4 +1,8 @@
+require 'date'
+
 module PortfolioHelper
+    DATE_FORMAT = '%B %d, %Y'
+
     def project_items(type)
         result = []
         @items.find_all("/projects/*.html").each do |item|
@@ -19,6 +23,12 @@ module PortfolioHelper
         result.sort { |a,b| b[:year] <=> a[:year] }
     end
 
+    def article_items
+        @items.find_all("/articles/**/index.md").sort { |a,b|
+            b[:date] <=> a[:date]
+        }
+    end
+
     def year_of(project)
         project[:year].to_s.split('.')[0]
     end
@@ -29,5 +39,9 @@ module PortfolioHelper
         else
             item_path
         end
+    end
+
+    def format_date(item_date)
+        item_date.strftime(DATE_FORMAT)
     end
 end

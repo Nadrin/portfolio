@@ -18,6 +18,23 @@ p,li {
     font-size: 12pt;
 }
 
+/* Common elements */
+blockquote p {
+    font-style: italic;
+    font-size: 11pt;
+    color: rgb(56, 56, 56);
+}
+
+/* Source code */
+pre, code {
+    font-family: 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', Monaco, monospace;
+    font-size: 10pt;
+    font-weight: bold;
+}
+pre span {
+    font-family: 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', Monaco, monospace;
+}
+
 /* Links */
 .section a {
     color: #3498DB;
@@ -27,6 +44,9 @@ p,li {
 }
 .menu-content a:hover {
     color: #3498DB;
+}
+.heading-link {
+    text-decoration: none;
 }
 
 /* Headings */
@@ -48,11 +68,6 @@ h4 {
     font-family: 'Tschichold';
     font-size: 32pt;
 }
-@media (min-width: 750px) {
-    .menu-content {
-        margin-top: 1.0em;
-    }
-}
 
 /* Social bar */
 .social {
@@ -73,7 +88,10 @@ footer {
     color: rgb(128, 128, 128);
 }
 
-/* Projects */
-.project-item p {
-    margin: 0.5em 0em;
+/* Footnotes */
+.footnotes p {
+    font-size: 10pt;
+}
+.footnotes li {
+    font-size: 10pt
 }

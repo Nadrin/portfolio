@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= render '/partials/head.html' %>
+    </head>
+    <body>
+        <%= render '/partials/top.html' %>
+        <div class="section">
+            <div class="index">
+                <h2>Articles</h2>
+                <% article_items.each do |article| %>
+                <div class="index-item">
+                    <a class="heading-link" href="<%= page_url(article.path) %>"><h3><%= "#{article[:title]}" %></h3></a>
+                    <div class="smalltext"><%= format_date(article[:date]) %></div>
+                    <p><%= article[:summary] %></p>
+                    <p class="index-morelink"><a href="<%= page_url(article.path) %>">Read more &raquo;</a></p>
+                </div>
+                <div class="index-separator"></div>
+                <% end %>
+            </div>
+        </div>
+        <%= render '/partials/bottom.html' %>
+    </body>
+</html>

@@ -12,12 +12,20 @@ compile '/projects/*.html' do
   layout '/project.html'
   filter :erb
 end
+compile '/articles/**/*.md' do
+  filter :kramdown
+  layout '/article.html'
+  write @item.identifier.without_ext + '.html'
+end
 compile '/**/*' do
   write item.identifier.to_s
 end
 
 route '/homepage.html' do
   '/index.html'
+end
+route '/articleindex.html' do
+  '/articles/index.html'
 end
 route '/**/*.{html}' do
   item.identifier.to_s

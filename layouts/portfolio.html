@@ -6,30 +6,30 @@
     <body>
         <%= render '/partials/top.html' %>
         <div class="section">
-            <div class="projects">
+            <div class="index">
                 <h2>Featured Projects</h2>
                 <% project_items(:featured).each do |project| %>
-                <div class="project-item">
+                <div class="index-item">
                     <a href="<%= page_url(project.path) %>"><img src="<%= project[:icon] %>"></a>
                     <h3><%= "#{project[:name]} (#{year_of(project)})" %></h3>
-                    <div class="project-tech"><%= project[:tech] %></div>
+                    <div class="smalltext"><%= project[:tech] %></div>
                     <p><%= project[:description] %></p>
                     <%= project[:summary] %>
-                    <p class="project-morelink"><a href="<%= page_url(project.path) %>">Read more &raquo;</a></p>
+                    <p class="index-morelink"><a href="<%= page_url(project.path) %>">Read more &raquo;</a></p>
                 </div>
-                <div class="project-separator"></div>
+                <div class="index-separator"></div>
                 <% end %>
                 <h2>Other Projects</h2>
                 <% project_items(:other).each do |project| %>
-                <div class="project-item">
+                <div class="index-item">
                     <a href="<%= page_url(project.path) %>"><img src="<%= project[:icon] %>"></a>
                     <h3><%= "#{project[:name]} (#{year_of(project)})" %></h3>
-                    <div class="project-tech"><%= project[:tech] %></div>
+                    <div class="smalltext"><%= project[:tech] %></div>
                     <p><%= project[:description] %></p>
                     <%= project[:summary] %>
-                    <p class="project-morelink"><a href="<%= page_url(project.path) %>">Read more &raquo;</a></p>
+                    <p class="index-morelink"><a href="<%= page_url(project.path) %>">Read more &raquo;</a></p>
                 </div>
-                <div class="project-separator"></div>
+                <div class="index-separator"></div>
                 <% end %>
             </div>
         </div>

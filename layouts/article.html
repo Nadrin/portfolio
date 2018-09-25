@@ -10,14 +10,9 @@
             <div class="content-image">
                 <img src="<%= @item[:image] %>">
             </div>
-            <% elsif @item.key?(:vimeo) %>
-            <div class="content-vimeo">
-                <iframe src="https://player.vimeo.com/video/<%= @item[:vimeo] %>?title=0&byline=0&portrait=0&color=3498db" allowfullscreen></iframe>
-            </div>
             <% end %>
-            <h2><%= "#{@item[:name]} (#{year_of(@item)})" %></h2>
-            <p class="smalltext"><%= @item[:tech] %></p>
-            <p><%= @item[:description] %></p>
+            <h2><%= "#{@item[:title]}" %></h2>
+            <p class="smalltext"><%= format_date(@item[:date]) %></p>
             <%= yield %>
         </div>
         <%= render '/partials/bottom.html' %>
